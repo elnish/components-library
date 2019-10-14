@@ -1,0 +1,301 @@
+body {
+    display: flex;
+    
+}
+
+.main {
+    width: 100%;
+}
+
+.title-h2 {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.subtitle {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.body-text {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+
+}
+
+.tips {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.hpc-button {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 9px 16px;
+    border: 2px solid #1BBD9F;
+    border-radius: 5px;
+    outline: none;
+    background: transparent;
+    &--outlined {
+        color: #1BBD9F;
+        &:hover {
+            background-color: #1BBD9F;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+    &--contained {
+        background-color: #1BBD9F;
+        color: #fff;
+        &:hover {
+            background-color: #1BBD9F;
+            cursor: pointer;
+            opacity: .8;
+        }
+    }
+}
+.close-btn {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.input-box {
+    width: 570px;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 0;
+        height: 3px;
+        z-index: 1;
+        transform: translateX(-50%);
+        transition: all 0.3s ease-in-out;
+        background-color: #F46271;
+        border-radius: 0px 0px 5px 5px;
+    }
+    &.incorrect:before {
+        left: 0;
+        width: 100%;
+        transform: translateX(0);
+    }
+    label {
+        display: block;
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: #454C5C;
+    }
+    input {
+        border: 1px solid #A0A7B9;
+        border-radius: 5px;
+        width: 100%;
+        height: 40px;
+        padding-left: 10px;
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: #717889;
+        outline: none;
+        &::placeholder {
+            color: #A0A7B9;
+        }
+        &:focus {
+            border-color: #D1D8EB;
+        }
+        &--large {
+            width: 570px;
+        }
+    }
+    &__error {
+        display: block;
+        color: #F46271;
+        font-family: 'Nunito Sans';
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+
+//popup
+.hpc-popup {
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0px 2px 8px rgba(152, 142, 222, 0.08);
+    border-radius: 8px;
+    padding: 24px 18px 24px 24px;
+    .close-btn {
+        align-self: flex-end;
+        margin: 0 10px 24px 0;
+        
+    }
+    .hpc-button--outlined {
+        align-self: flex-end;
+        margin: 24px 18px 0 0;
+    }
+}
+.hpc-popup-with-scroll-bar {
+    width: 320px;
+    height: 435px;
+    padding-right: 18px;
+
+    
+}
+
+.scrolled {
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgba(152, 142, 222, .1);
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #988EDE;
+        border-radius: 5px;
+    }
+    &::-webkit-scrollbar-button:single-button  {
+        width: 6px;
+        height: 14px;
+        border: none;
+    }
+    &::-webkit-scrollbar-button:single-button:vertical:decrement {
+        background: rgba(152, 142, 222, .1) url(../images/hcp-scrollbar-arrow-up.svg) no-repeat center 5px;
+        border-radius: 5px 5px 0 0;
+    }
+    &::-webkit-scrollbar-button:single-button:vertical:increment {
+        background: rgba(152, 142, 222, .1) url(../images/hcp-scrollbar-arrow-down.svg) no-repeat center ;
+        border-radius: 0 0 5px 5px;
+    }
+}
+
+// modal
+
+.hpc-modal {
+    max-width: 350px;
+    width: 100%;
+    background: #F5F5FA;
+    box-shadow: 0px 2px 8px rgba(152, 142, 222, 0.08);
+    border-radius: 8px;
+    padding: 24px;
+    &__row {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &--right {
+            justify-content: flex-end;
+        }
+    }
+    .title-h2 {
+        color: #454C5C;
+    }
+    .body-text {
+        padding: 16px 0 24px 0;
+        color: #454C5C;
+    }
+    .hpc-button {
+        text-align: right;
+    }
+    .hpc-button--contained {
+        margin-left: 24px;
+    }
+}
+
+
+//aside
+.hpc-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    max-width: 250px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(152, 142, 222, 0.08);
+    
+    &__link {
+        display: inline-block;
+        padding: 15px 10px;
+        &--active {
+            border-left: 4px solid #1BBD9F;
+            background: linear-gradient(89.11deg, rgba(27, 189, 159, 0.15) 0.14%, rgba(255, 255, 255, 0) 95.84%);
+        }
+    }
+    &__list {
+        .subtitle {
+            color: #717889;
+        }
+        
+        &:first-child:before {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url(../images/clipboard-with-pencil-icon.svg) no-repeat center center;
+        }
+    }
+    &__down-list {
+        padding-left: 32px;
+        margin-bottom: 16px;
+        a {
+            color: #717889;
+        }  
+    }
+    &__footer {
+        .subtitle {
+            color: #454C5C;
+            &:before {
+                content: "";
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                margin: 0 8px 0 24px;
+                background: url(../images/ellipse-icon.svg) no-repeat center center;
+            }
+        }
+    }
+    .tips {
+        text-align: center;
+        padding: 10px 0;
+        border-top: 2px solid #F5F5FA;
+        color: #717889;
+       
+    }
+}
+
+
+.img-circular{
+ width: 40px;
+ height: 40px;
+ background-image: url('https://st3.depositphotos.com/1007566/13129/v/1600/depositphotos_131295836-stock-illustration-businessman-character-avatar-icon.jpg');
+ background-size: cover;
+ background-position: center center;
+ display: block;
+ border-radius: 50%;
+}
