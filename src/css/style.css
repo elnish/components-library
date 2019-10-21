@@ -260,3 +260,29 @@ textarea {
     background: transparent; }
     .hcp-input-search-box button:hover {
       cursor: pointer; }
+
+.hcp-topbar-popup {
+  margin-top: 200px;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0px 2px 8px rgba(152, 142, 222, 0.08);
+  border-radius: 8px;
+  position: relative; }
+  .hcp-topbar-popup:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    top: -14px;
+    right: 5%; }
+  .hcp-topbar-popup--dark {
+    background-color: #A0A7B9; }
+    .hcp-topbar-popup--dark:before {
+      background-image: url(../images/rounded-tringle-grey.svg); }
+  .hcp-topbar-popup--light {
+    background-color: #fff; }
+    .hcp-topbar-popup--light:before {
+      background-image: url(../images/rounded-tringle-white.svg); }
